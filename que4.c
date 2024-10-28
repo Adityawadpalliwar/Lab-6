@@ -6,11 +6,13 @@ int main(){
     char string[50];
     printf("enter the string: ");
     gets(string);
-    while(string[i]!='\0')
+    
+    for(i=0;string[i]!='\0';i++)
     {
-        i++;
+        if (string[i]>='A'&&string[i]<='Z')
+        string[i] = string[i] +32;
     }
 
-    printf("\nthe length of a given string is %d ",i);
-   
+    puts(string);
+
 }
