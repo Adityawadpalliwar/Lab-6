@@ -13,16 +13,16 @@ int main(){
     printf("enter the character: ");
     scanf("%c",&ch);
 
-    for(i=0;string[i]!='\0';i++)
+    printf("where do you want to insert it \? ");
+    scanf("%d",&i);
+
+    for(int j=strlen(string);j>=i-1;j--)
     {
-        if (string[i]==ch)
-        {  
-          printf("%d",i+1);
-          break;
-          }
+        string[j+1]=string[j];
     }
 
-  
+    string[i-1]=ch;
 
+    puts(string);
 
 }

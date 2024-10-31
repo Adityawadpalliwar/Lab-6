@@ -1,4 +1,4 @@
-...
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -13,15 +13,14 @@ int main(){
     printf("enter the string2: ");
     gets(string2);
 
-  int y = strstr(string1,'\0');
-  int j=0;
-   while(string2[j]!='\0')
-   {
-    string1[y]=string2[j];
-    y++;
-    j++;
-   }
+int y = strlen(string1);
+  
+  for(int i=0;string2[i]!='\0';i++)
+  {
+    string1[y+i]=string2[i];
+  }
 
+  string1[y + strlen(string2)] = '\0';
 printf("now string1 becomes: ");
 puts(string1);
 

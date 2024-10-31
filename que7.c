@@ -1,4 +1,4 @@
-..
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -12,8 +12,9 @@ int main(){
 
     printf("enter the string2: ");
     gets(string2);
+
    if(strlen(string1)==strlen(string2))
-   { for(int j=0;strlen(string1)!='\0';j++)
+   { for(int j=0;j<strlen(string1);j++)
        {
          if (string1[j]==string2[j])
          i++;  
