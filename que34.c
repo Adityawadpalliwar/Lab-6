@@ -3,7 +3,7 @@
 #include<stdlib.h>
 int main(){
     char string1[50];
-    char string2[50];
+    
     int i,j;
     int k=0;
     int t;
@@ -11,9 +11,20 @@ int main(){
     printf("enter the string1: ");
     fgets(string1,50,stdin);
     string1[strlen(string1)-1] ='\0';
-    for(i=0;i<strlen(string1);i++)
-    {printf("%c",string1[i]);}
-    printf("%d",strlen(string1));
-
     
+  
+    for (j=0;j<strlen(string1);j++)
+    {
+        printf("%c\n",string1[j]);
     }
+
+    for(j=0;j<strlen(string1)-1;j++)
+    {
+        printf("%c%c\n",string1[j],string1[j+1]);
+    }
+
+   
+..
+
+ }
+    
