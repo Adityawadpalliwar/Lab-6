@@ -1,40 +1,27 @@
-// C program for the above approach
+
 #include <stdio.h>
 #include <string.h>
-
-
-void Superascii(char s[])
+void check(char *ptr,int n)
 {
-	
-	int b[26] = {0};
-	for (int i = 0;i<strlen(s);i++)
-    {
-		int index = (int)s[i] - 97;
-		b[index]++;
-	}
-
-	for (int i = 0; i < strlen(s); i++) 
-    {
-		int index = (int)s[i] - 97;
-		if (b[index] != index) {
-			printf("No");
-			return;
-		}
-	}
-
-	printf("Yes");
+ int i,m=0;
+ for(i=0;i<n-2;i++)
+ { if(*(ptr+i)==*(ptr+i+2))
+   {
+		m++;
+   }
 }
+ if(m==n-2)
+ printf("yes");
+ else
+ printf("no");
 
-
+}
 int main()
 {  char string[50];
 	printf("enter the string1: ");
     fgets(string,50,stdin);
     string[strlen(string)-1] ='\0';
-	
-
-	
-	Superascii(string);
+	int n = strlen(string);
+	check(string,n);
 	return 0;
 }
-...
