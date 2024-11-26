@@ -8,7 +8,7 @@ int main(){
     int i;
     printf("enter the string: ");
     fgets(string,50,stdin);
-
+    string[strlen(string)-1]='\0';
 
     printf("enter the character: ");
     scanf("%c",&ch);
@@ -16,12 +16,12 @@ int main(){
     printf("where do you want to insert it \? ");
     scanf("%d",&i);
 
-    for(int j=strlen(string);j>=i-1;j--)
+    for(int j=strlen(string);j>=i;j--)
     {
         string[j+1]=string[j];
     }
 
-    string[i-1]=ch;
+    string[i]=ch;
 
     puts(string);
 

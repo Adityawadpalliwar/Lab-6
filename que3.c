@@ -12,9 +12,9 @@ int main(){
     string1[strlen(string1)-1]='\0';
     printf("enter the string2: ");
     fgets(string2,50,stdin);
-    string1[strlen(string1)-1]='\0';
+    string2[strlen(string2)-1]='\0';
 
-int y = strlen(string1);
+  int y = strlen(string1);
   
   for(int i=0;string2[i]!='\0';i++)
   {
