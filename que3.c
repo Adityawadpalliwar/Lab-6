@@ -8,10 +8,11 @@ int main(){
     char string2[50];
 
     printf("enter the string1: ");
-    gets(string1);
-
+    fgets(string1,50,stdin);
+    string1[strlen(string1)-1]='\0';
     printf("enter the string2: ");
-    gets(string2);
+    fgets(string2,50,stdin);
+    string1[strlen(string1)-1]='\0';
 
 int y = strlen(string1);
   

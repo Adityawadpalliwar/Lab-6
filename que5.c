@@ -8,7 +8,7 @@ int main(){
     int i;
     printf("enter the string: ");
     fgets(string,50,stdin);
-    
+    string[strlen(string)-1]='\0';
 
     int y= strlen(string);
 

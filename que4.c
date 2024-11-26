@@ -5,7 +5,8 @@ int main(){
     int i=0;
     char string[50];
     printf("enter the string: ");
-    gets(string);
+    fgets(string,50,stdin);
+    string[strlen(string)-1]='\0';
     
     for(i=0;string[i]!='\0';i++)
     {
